@@ -19,6 +19,11 @@ contours, hierarchies = cv.findContours(canny, cv.RETR_LIST, cv.CHAIN_APPROX_SIM
 #CHAIN_APPROX_NONE returns all the points on the contour
 #CHAIN_APPROX_SIMPLE returns all the points on the contour in simple ones to make more sense
 
-print('{len(contours)} contours found!')
+#ret,thresh = cv.threshold(gray,125,255,cv.THRESH_BINARY)
+#cv.imshow('Thresh',thresh)
+
+print(f'{len(contours)} contours found!')
 
 cv.waitKey(0)
+
+#bluring the image will reduce the number of contour points
