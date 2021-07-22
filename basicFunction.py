@@ -20,4 +20,16 @@ cv.imshow('Edge',canny)
 dilated = cv.dilate(canny,(3,3), iterations=1)  #(3,3) is kernel size
 cv.imshow('Dilated',dilated)
 
+# 5) Eroding an Image
+eroded = cv.erode(dilated, (3,3), iterations=1)   #dilate will increase the thickness and size of edges and erode will decrease the thickness
+cv.imshow('Eroded',eroded)
+
+# 6) Resize and Image
+resized = cv.resize(img, (500,500), interpolation=cv.INTER_CUBIC)  #INTER_AREA--useful if you are shrinking the image to smaller size that of the original image. INTER_LINEAR and INTER_CUBIC is used when image is scaled to bigger size. INTER_CUBIC is smallest among all but gives higher quality image
+cv.imshow('Resize',resized)
+
+# 7) Cropping an image
+cropped = img[50:200, 200:400]
+cv.imshow('Cropped',cropped)
+
 cv.waitKey(0)
