@@ -26,3 +26,5 @@ print(f'{len(contours)} contours found!')
 cv.waitKey(0)
 
 #bluring the image will reduce the number of contour points
+
+#always try to do canny then contour counting rather than doing thresholding first
