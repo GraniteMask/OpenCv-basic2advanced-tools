@@ -23,4 +23,13 @@ cv.imshow('Rectangle',blank)
 
 # 3) Draw a circle
 
+cv.circle(blank, (blank.shape[1]//2,blank.shape[0]//2), 40, (0,0,250), thickness=3)   #(file,ending point, radius,color,thickness) #if thickness=-1 then we can fill the color of circle
+
+cv.imshow('Circle',blank)
+
+# 4)Draw a line
+
+cv.line(blank, (0,0), (blank.shape[1]//2,blank.shape[0]//2), (255,255,255), thickness=3)
+cv.imshow('line',blank)
+
 cv.waitKey(0)
