@@ -14,4 +14,7 @@ blur = cv.GaussianBlur(img,(3,3),cv.BORDER_DEFAULT)  #more natural blur than ave
 #Median Blur
 median cv.medianBlur(img,3)
 
+#Bilateral Blue (most effective blur)
+bilateral = cv.bilateralFilter(img, 5,15, 15)  #(img,diameter,sigmacolor,sigmaspace[determine the distance of pixel effecting the computation of a particular pixel])
+
 cv.waitKey(0)
