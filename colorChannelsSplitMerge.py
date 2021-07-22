@@ -4,7 +4,7 @@ import numpy as np
 img = cv.imread('../photos/big-bang.jpg')
 cv.imshow('Bang',img)  
 
-blank=np.zeros(img.shape[:2], dtype='uint8')
+blank=np.zeros(img.shape[:2], dtype='uint8') #same size blank image as img file
 cv.imshow('Blank',blank)
 
 b,g,r = cv.split(img)
