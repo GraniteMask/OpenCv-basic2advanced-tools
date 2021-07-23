@@ -24,3 +24,5 @@ cv.imshow('Sobel Y', sobely)
 cv.imshow('Combined Sobel', combined_sobel)
 
 cv.waitKey(0)
+
+#Canny is more advanced. Use Canny to see the difference between the edge detection methods
