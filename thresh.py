@@ -15,6 +15,9 @@ cv.imshow('Simple Thresholding', thresh)
 threshold, thresh_inv = cv.threshold(gray, 150, 255, cv.THRESH_BINARY_INV)
 cv.imshow('Simple Thresholding', thresh_inv)
 
-# 2) Adaptive Thresholding
+# 2) Adaptive Thresholding (manually specify the threshold value-->in advance cases will not work)
+
+adapt_thresh = cv.adaptiveThreshold(gray, 255, cv.ADAPTIVE_THRESH_MEAN_C, cv.THRESH_BINARY,11,3) #(src,maxValue,adaptiveMethod,thresholdType,blocksize,c)
+cv.imshow('Adaptive Thresholding', adapt_thresh)
 
 cv.waitKey(0)
