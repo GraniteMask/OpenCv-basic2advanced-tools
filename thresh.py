@@ -15,9 +15,11 @@ cv.imshow('Simple Thresholding', thresh)
 threshold, thresh_inv = cv.threshold(gray, 150, 255, cv.THRESH_BINARY_INV)
 cv.imshow('Simple Thresholding', thresh_inv)
 
-# 2) Adaptive Thresholding (manually specify the threshold value-->in advance cases will not work)
+# 2) Adaptive Thresholding (don't have to manually specify the threshold value-->in advance cases will not work)
 
 adapt_thresh = cv.adaptiveThreshold(gray, 255, cv.ADAPTIVE_THRESH_MEAN_C, cv.THRESH_BINARY,11,3) #(src,maxValue,adaptiveMethod,thresholdType,blocksize,c)
 cv.imshow('Adaptive Thresholding', adapt_thresh)
 
 cv.waitKey(0)
+
+#ADAPTIVE_THRESH_GAUSSIAN_C--> add a weight to each pixel and then compute the mean of pixels. Better image in case of ADAPTIVE_THRESH_MEAN_C
